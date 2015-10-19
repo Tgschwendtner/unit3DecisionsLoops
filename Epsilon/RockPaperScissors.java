@@ -9,18 +9,45 @@ public class RockPaperScissors
         System.out.println("Player 2: Choose rock, scissors, or paper:");
         String player2 = scan.next().toLowerCase(); 
         //(your code goes here…)
+        
         int result = player1.compareTo(player2);
+        
         if (result == 0)
         {
             System.out.println("Tie");
         }
-        if (result < 0)
+        else if (player1.equals ("rock"))
         {
-            System.out.println("Player1 Wins");
+            if ( player2.equals ("scissors"))
+            {
+                System.out.println("Player 1 wins");
+            }
+            if ( player2.equals ("paper"))
+            {
+                System.out.println("Player 2 wins");
+            }
         }
-        if (result > 0)
+        else if (player1.equals ("paper"))
         {
-            System.out.println("Player2 Wins");
+            if ( player2.equals ("rock"))
+            {
+                System.out.println("Player 1 wins");
+            }
+            if ( player2.equals ("scissors"))
+            {
+                System.out.println("Player 2 wins");
+            }
+        }
+        else if (player1.equals ("scissors"))
+        {
+            if ( player2.equals ("paper"))
+            {
+                System.out.println("Player 1 wins");
+            }
+            if ( player2.equals ("rock"))
+            {
+                System.out.println("Player 2 wins");
+            }
         }
     }
 }
