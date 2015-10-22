@@ -7,3 +7,16 @@ are not leap years, but years that are divisible by 400 are leap years (for exam
 2000). Write a program that asks the user for a year and computes whether that year
 is a leap year. Provide a class Year with a method isLeapYear. Use a single if statement
 and Boolean operators.**/
+import java.util.Scanner;
+public class Leap_Year
+{
+   public static void main(String[] args)
+   {
+       Scanner in = new Scanner(System.in);
+       
+       System.out.print("What year would you like to compute? ");
+       int year = in.next();
+       
+    }
+    
+}
