@@ -14,8 +14,8 @@ public class PromptUntilMatch
             {
                 valid = true;
             }
-    }
-    while( !valid );
-    return input;
+        }
+        while( !valid );
+        return input;
     }
 }
