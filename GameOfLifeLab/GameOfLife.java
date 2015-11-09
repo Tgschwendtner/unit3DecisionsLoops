@@ -17,9 +17,9 @@ public class GameOfLife
     // the world comprised of the grid that displays the graphics for the game
     private ActorWorld world;
     
-    // the game board will have 5 rows and 5 columns
-    private final int ROWS = 5;
-    private final int COLS = 5;
+    // the game board will have 25 rows and 25 columns
+    private final int ROWS = 25;
+    private final int COLS = 25;
     
     /**
      * Default constructor for objects of class GameOfLife
