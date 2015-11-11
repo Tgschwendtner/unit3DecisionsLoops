@@ -1,4 +1,4 @@
-Introduction
+﻿Introduction
 
 The goal of this lab is to apply your understanding of decision and loop
 	structures to implement a complex algorithm within the context of an
@@ -30,6 +30,61 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal
 	moment at which this happens is sometimes called a tick (in other words,
 	each generation is a pure function of the preceding one). The rules
 	continue to be applied repeatedly to create further generations.
+
+Requirements:
+
+World = 25x25
+Alive cells = x
+Dead cells = -
+Patterns are chosen in code, Maybe by user later
+Runs forever till all cells are dead
+Time interval is .5 seconds
+Warps around
+
+
+First 3 Generations:
+gen 1 = 
+	  0 1 2 3 4 5 6 7 8 9
+        0 - - - - x - - - - -
+        1 - - - x - x - - - -
+        2 - - x - - - x - - -
+        3 - x - x - x - x - -
+        4 x - - - x - - - x -
+        5 - x - x - x - x - -
+        6 - - x - - - x - - -
+        7 - - - x - x - - - -
+        8 - - - - x - - - - -
+        9 - - - - - - - - - -  
+
+
+gen 2 = 
+	  0 1 2 3 4 5 6 7 8 9
+        0 - - - - x - - - - -
+        1 - - - x x x - - - -
+        2 - - x x - x x - - -
+        3 - x x x x x x x - -
+        4 x x - x - x - x x -
+        5 - x x x x x x x - -
+        6 - - x x - x x - - -
+        7 - - - x x x - - - -
+        8 - - - - x - - - - -
+        9 - - - - - - - - - - 
+
+
+
+
+gen 3 = 
+	  0 1 2 3 4 5 6 7 8 9
+        0 - - - x x x - - - -
+        1 - - x - - - x - - -
+        2 - x - - - - - x - -
+        3 x - - - - - - - x -
+        4 x - - - - - - - x -
+        5 x - - - - - - - x -
+        6 - x - - - - - x - -
+        7 - - x - - - x - - -
+        8 - - - x x x - - - -
+        9 - - - - - - - - - - 
 
 
 Nonfunctional Requirements:
