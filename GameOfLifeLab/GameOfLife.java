@@ -37,9 +37,10 @@ public class GameOfLife
 
         // populate the game
         populateGame();
-
+        
         // display the newly constructed and populated world
         world.show();
+        
 
     }
 
@@ -173,7 +174,7 @@ public class GameOfLife
      * @post    the world has been populated with a new grid containing the next generation
      * 
      */
-    private void createNextGeneration()
+    public void createNextGeneration()
     {
         /** You will need to read the documentation for the World, Grid, and Location classes
          *      in order to implement the Game of Life algorithm and leverage the GridWorld framework.
@@ -187,33 +188,33 @@ public class GameOfLife
 
         int col = getNumCols();
         int row = getNumRows();
-        for (int column = 0; column == col; column++)
+        for (int column = 0; column < col; column++)
         {
-            for (int rows = 0; rows == row; rows++)
+            for (int rows = 0; rows < row; rows++)
             {
-                Actor cell = getActor(row, column);
-                Location location = new Location(row, column);
+                Actor cell = getActor(rows, column);
+                Location location = new Location(rows, column);
                 if (cell != null)
                 {
-                    
                     ArrayList<Actor> Neighbors = grid.getNeighbors(location);
                     int Neighborscount = Neighbors.size();
                     if (Neighborscount == 3)
                     {
                         //lives
                         Rock newrock1 = new Rock();
-                        Location loc1 = new Location(row, column);
-                        newgrid.put(loc1, newrock1);
+                        Location newloc1 = new Location(rows, column);
+                        newgrid.put(newloc1, newrock1);
                     }
                     else if (Neighborscount == 2)
                     {
                         //lives
-                        
+                        Rock newrock1 = new Rock();
+                        Location newloc1 = new Location(rows, column);
+                        newgrid.put(newloc1, newrock1);
                     }
                     else if (Neighborscount < 3)
                     {
                         //dies
-
                     }
                     else if (Neighborscount > 3)
                     {
@@ -228,13 +229,14 @@ public class GameOfLife
                     {
                         //reborn
                         Rock newrock1 = new Rock();
-                        Location loc1 = new Location(row, column);
-                        newgrid.put(loc1, newrock1);
+                        Location newloc1 = new Location(rows, column);
+                        newgrid.put(newloc1, newrock1);
                     }
                 }
             }
         }
         world.setGrid(newgrid);
+        world.show();
     }
 
     /**
